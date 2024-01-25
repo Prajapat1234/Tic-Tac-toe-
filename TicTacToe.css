@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0; */
+    color: white;
+    user-select: none;
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .container {
+    text-align: center;
+    color: white;
+    color: linear-gradient( to right bottom, rgb(255, 0, 0) 2%,rgb(0, 0, 0) 60%);
+    /* margin: 100px; */
+    padding: 10px;
+    /* margin-bottom: 10rem; */
+  }
+
+  h1{
+    padding: 10px;
+  }
+
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    /* color: red; */
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    /* border-radius: 30px; */
+    border: 1px solid #413b3b;
+    font-size: 24px;
+    /* border: none; */
+    display: flex;
+    box-shadow: 1px 3px 4px white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .cell:hover {
+    /* color: ; */
+    /* background: linear-gradient( to top right, rgb(75, 71, 71) 5%,rgb(0, 2, 0) 90%); */
+    border: 1px solid #ff0000;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient( to right bottom, rgb(235, 235, 235) 20%,rgb(87, 94, 87) 80%);
+  }
+  
+  button:hover,
+  button:active {
+      background: linear-gradient( to right bottom, rgb(255, 0, 0) 2%,rgb(0, 0, 0) 60%);
+      color: white;
+      border: 1px solid #ffffff;
+      
+   }
+  
+   .Popup {
+    width: 20rem;
+    /* background: rgb(212, 203, 203); */
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(.1);
+    text-align: center;
+    visibility: hidden;
+    padding: 0 40px 10px;
+    transform: 0.5s linear ;
+    /* transition: 0.5s linear ; */
+    top: 0;
+    color: black;
+    background-image: url(./celebrate1.gif);
+    background-repeat: no-repeat;
+    background-size:cover ;
+
+    
+}
+
+.winning-cell {
+    background: linear-gradient( to right bottom, rgb(21, 255, 0) 2%,rgb(30, 128, 17) 60%);
+    transition: 0.8s linear ;
+    position: relative;
+    /* width: 10px;  */
+}
+
+
+.line{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.Pop-up{
+    top: 50%;
+    visibility: visible;
+    /* scale: (1.2); */
+    margin-top: 10px;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.Popup button {
+    width: 5rem;
+    color: white;
+    background: linear-gradient( to right bottom, rgb(255, 0, 0) 2%,rgb(0, 0, 0) 60%);
+    outline: none;
+    margin-top: .6rem;
+    
+}
+.Popup p{
+    font-weight: bold;
+    /* border: 2px solid red; */
+    padding-bottom: 10px;
+}
+.Draw{
+    width: 20rem;
+    background: rgb(212, 203, 203);
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(.1);
+    text-align: center;
+    visibility: hidden;
+    padding: 0 40px 10px;
+    transform: 0.5s linear ;
+    transition: 0.5s linear ;
+    top: 0;
+    color: black;
+}
+
+.draw-up{
+    top: 50%;
+    visibility: visible;
+    /* scale: (1.2); */
+    transform: translate(-50%, -50%) scale(1);
+}
